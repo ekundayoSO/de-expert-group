@@ -131,11 +131,12 @@ h3 {
   gap: clamp(2rem, 5vw, 4.5rem);
   align-items: center;
 }
-.grid-3 {
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   align-items: stretch;
+  margin-top: 1.5rem;
 }
 .hero {
   padding: clamp(4rem, 8vw, 6.5rem) 0;
@@ -175,6 +176,14 @@ h3 {
 .hero-media {
   aspect-ratio: 16/10;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.who-we-serve-media {
+  aspect-ratio: 19 / 16;
+}
+.media-frame.who-we-serve-media img {
+  width: auto;
+  max-width: none;
+  height: 100%;
 }
 .media-frame img,
 .card-media img {
@@ -484,9 +493,6 @@ footer {
   font-size: 0.85rem;
 }
 @media (max-width: 960px) {
-  .grid-3 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .service-card h3 {
     min-height: auto;
   }
@@ -504,7 +510,7 @@ footer {
     gap: 1.1rem;
   }
   .grid-2,
-  .grid-3 {
+  .services-grid {
     grid-template-columns: 1fr;
   }
   .hero .grid-2 {
